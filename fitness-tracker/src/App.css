@@ -1,0 +1,1309 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General body and layout styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 2.0; /* Adjusted line height */
+  font-size: 24px; /* Base font size */
+}
+
+header {
+  background-color: #673ab7;
+  color: white;
+  padding: 32px; /* Increased padding */
+  font-size: 48px; /* Increased font size for header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav {
+  background-color: #673ab7;
+  display: flex;
+  justify-content: center; /* Centers the entire nav bar */
+  padding: 10px 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centers the links within the nav */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+nav a.active-link {
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Main container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  align-items: center;
+}
+
+/* Goals Section */
+.goals {
+  background: white;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px; /* Fixes stacking issue */
+}
+
+.goals h2 {
+  font-size: 48px; /* Section title size */
+  color: #673ab7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Goal List Section */
+.goal-list {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Increased spacing between goals */
+}
+
+.goal-list h3, 
+.goal-tips h3 {
+  font-size: 44px !important; /* Increased by +5px */
+  font-weight: bold;
+  color: #673ab7;
+  text-align: center;
+}
+
+.goal-list p, 
+.goal-tips p {
+  font-size: 29px !important; /* Increased by +5px */
+  text-align: center;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Input Section */
+.goal-input {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.goal-input input {
+  padding: 12px 15px;
+  font-size: 18px;
+  width: 60%; /* Adjusted width to prevent overlap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+.goal-input button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.goal-input button:hover {
+  background-color: #45a049;
+}
+
+/* Recommended Goals Section */
+.recommended-goals {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.recommended-goals h3 {
+  font-size: 36px; /* Title size for recommended goals */
+  color: #673ab7;
+  margin-bottom: 30px;
+}
+
+.recommended-goals ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recommended-goals ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.recommended-goals ul li button {
+  padding: 20px 60px; /* Adjusted padding */
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 16px; /* Adjusted radius */
+  font-size: 32px; /* Adjusted font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 900px; /* Reduced width */
+  text-align: center;
+}
+
+.recommended-goals ul li button:hover {
+  background-color: #1976d2;
+}
+
+/* Goal Cards Section */
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.goal-card h4 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.goal-card p {
+  font-size: 24px;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.goal-actions button {
+  padding: 15px 30px;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.goal-actions button.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.goal-actions button.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.goal-actions button.complete-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.goal-actions button.complete-button:hover {
+  background-color: #388e3c;
+}
+
+/* Motivational Tips Section */
+.goal-tips {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.goal-tips h3 {
+  font-size: 36px; /* Title size */
+  color: #673ab7;
+  margin-bottom: 20px;
+}
+
+.goal-tips p {
+  font-size: 24px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Footer styles */
+footer {
+  background-color: #673ab7;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  font-size: 24px;
+  position: fixed; /* Makes the footer stick to the bottom */
+  bottom: 0;
+  width: 100%; /* Ensures the footer spans the entire width of the page */
+  z-index: 100; /* Ensures it appears above other content if needed */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .goal-input {
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .goal-input input {
+    width: 100%;
+  }
+  }
+
+/* Reminders Section */
+.reminders {
+  background: white;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  margin: auto;
+}
+
+.reminders h2 {
+  font-size: 56px;
+  color: #673ab7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Reminder Input */
+.reminder-input {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.reminder-input input,
+.reminder-input select {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 24px;
+  width: 25%;
+}
+
+.reminder-input button {
+  padding: 20px 40px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.reminder-input button:hover {
+  background-color: #45a049;
+}
+
+/* Reminder Categories */
+.reminder-categories h3 {
+  font-size: 40px;
+  color: #673ab7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reminder-categories ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.reminder-categories ul li button {
+  padding: 20px 40px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reminder-categories ul li button:hover {
+  background-color: #1976d2;
+}
+
+/* Reminder List */
+.reminder-list {
+  margin-top: 40px;
+}
+
+.reminder-list h3 {
+  font-size: 40px;
+  color: #673ab7;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reminder-list p {
+  font-size: 24px;
+  color: #666;
+  text-align: center;
+}
+
+.reminder-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reminder-card h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reminder-card p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.reminder-card .delete-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reminder-card .delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Meal Tracker Section */
+.meal-tracker {
+  background: white;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.meal-tracker h2 {
+  font-size: 56px;
+  color: #673ab7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Meal Entry Form */
+.meal-entry-form {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.meal-entry-form input {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 24px;
+  width: 18%;
+  text-align: center;
+}
+
+.meal-entry-form button {
+  padding: 20px 40px;
+  background-color: #2196f3; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.meal-entry-form button:hover {
+  background-color: #1976d2;
+}
+
+.meal-entry-form button:active {
+  background-color: #2196f3; /* Maintain blue even after clicking */
+}
+
+/* Recommended Meals Section */
+.recommended-meals {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.recommended-meals h3 {
+  font-size: 40px;
+  color: #673ab7;
+  margin-bottom: 30px;
+}
+
+.recommended-meals .meal-card {
+  display: inline-block;
+  padding: 20px;
+  background-color: blue !important; /* Blue box background */
+  color: white !important; /* White text */
+  border: 2px solid darkblue !important; /* Darker blue border */
+  border-radius: 12px;
+  margin: 15px;
+  width: 220px;
+  text-align: center;
+}
+
+.recommended-meals .meal-card h4 {
+  font-size: 20px;
+  color: white !important; /* Ensure header text is white */
+  margin-bottom: 10px;
+}
+
+.recommended-meals .meal-card p {
+  font-size: 16px;
+  color: white !important; /* Ensure paragraph text is white */
+  margin: 5px 0;
+}
+
+.recommended-meals .meal-card button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: lightblue !important; /* Lighter blue for button */
+  color: white !important; /* White text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.recommended-meals .meal-card button:hover {
+  background-color: navy !important; /* Darker blue on hover */
+}
+
+/* Daily Summary Section */
+.daily-summary {
+  margin-top: 50px;
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
+}
+
+.daily-summary h2 {
+  font-size: 48px;
+  color: #673ab7;
+  margin-bottom: 30px;
+}
+
+.daily-summary p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.graphs-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.graph-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 48%;
+}
+
+.graph-card h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  text-align: center;
+}
+
+.summary-card h3 {
+  font-size: 43px;
+  color: #673ab7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.summary-card ul {
+  list-style-position: inside;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+  font-size: 31px; /* Increased from 24px to 31px (+7) */
+}
+
+.summary-card li {
+  font-size: 31px; /* Ensures all list items are also +7 in size */
+}
+/* Your Meals Section */
+.your-meals {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.your-meals h3 {
+  font-size: 40px;
+  color: #673ab7;
+  margin-bottom: 20px;
+}
+
+.your-meals p {
+  font-size: 18px;
+  color: #666;
+}
+
+.your-meals .meal-card {
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.your-meals .meal-card h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.your-meals .meal-card p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.your-meals .meal-card .delete-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.your-meals .meal-card .delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Water Tracker Container */
+.water-tracker {
+  background: white;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Title */
+.water-tracker-title {
+  width: 100%;
+  text-align: center;
+}
+
+.water-tracker .page-title {
+  font-size: 50px; /* Increased from 41px */
+  color: #673ab7;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+/* Daily Goal Section */
+.daily-goal {
+  margin-bottom: 50px; /* Adjusted spacing */
+  text-align: center;
+  font-size: 36px; /* Increased font size */
+}
+
+.goal-title {
+  font-size: 34px;
+  color: #673ab7;
+  margin-bottom: 20px;
+}
+
+.goal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Increased gap */
+  font-size: 32px; /* Increased from 29px */
+}
+
+.goal-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjusted spacing */
+  font-size: 36px; /* Increased from 29px */
+  font-weight: bold;
+  color: #333;
+}
+
+.goal-input {
+  padding: 12px 15px; /* Adjusted padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  font-size: 26px; /* Increased font size */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.goal-input:focus {
+  border-color: #673ab7;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+  font-size: 24px;
+  color: #555;
+}
+
+/* Quick Add Section */
+.quick-add {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-button,
+.remove-button {
+  padding: 20px 40px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 28px;
+  cursor: pointer;
+  width: 180px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-button:hover,
+.remove-button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+.remove-button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+/* Hydration Reminder Section */
+.hydration-reminder {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.reminder-title {
+  font-size: 29px;
+  color: #673ab7;
+}
+
+.add-reminder-button,
+.clear-reminder-button {
+  padding: 15px 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 28px; /* Increased from 24px */
+  margin-right: 10px;
+}
+
+.add-reminder-button:hover {
+  background-color: #45a049;
+}
+
+.clear-reminder-button {
+  background-color: #f44336;
+}
+
+.clear-reminder-button:hover {
+  background-color: #d32f2f;
+}
+
+.reminder-list {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 24px;
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+/* Hydration Tips Section */
+.hydration-tips {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 32px; /* Increased font size */
+}
+
+.tips-title {
+  font-size: 29px;
+  color: #673ab7;
+}
+
+.tips-list {
+  list-style-type: disc;
+  margin: 20px 0;
+  text-align: left;
+  padding-left: 40px;
+  font-size: 28px; /* Increased font size */
+}
+
+/* Motivational Message */
+.motivational-message {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.success-message {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 32px; /* Increased font size */
+}
+
+.encouragement-message {
+  color: #ff9800;
+  font-weight: bold;
+  font-size: 32px; /* Increased font size */
+}
+
+
+/* Exercise Log Section */
+.exercise-log {
+  background: white;
+  border-radius: 15px;
+  padding: 60px;
+  width: 75%;  /* Same as water tracker */
+  max-width: 1200px; /* Adjusted to match water tracker */
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.exercise-log h2 {
+  font-size: 53px;
+  color: #673ab7;
+  margin-bottom: 30px;
+}
+
+/* Weekly Goal Progress */
+.weekly-goal {
+  font-size: 39px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.weekly-goal progress {
+  width: 80%;
+  height: 25px;
+  border-radius: 10px;
+  appearance: none; /* Fixes browser inconsistencies */
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+/* Styles for WebKit Browsers (Chrome, Edge, Safari) */
+.weekly-goal progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.weekly-goal progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+/* Styles for Firefox */
+.weekly-goal progress::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+
+.select-exercise,
+.input-small {
+  padding: 15px;
+  font-size: 29px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.add-button {
+  padding: 20px 50px;
+  font-size: 29px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Your Exercises Section */
+.your-exercises-title {
+  font-size: 45px;
+  color: #673ab7;
+  margin-top: 40px;
+}
+
+.no-exercises {
+  font-size: 28px;
+  color: #666;
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.exercise-entry {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 80%;
+  justify-content: center;
+}
+
+.exercise-icon {
+  font-size: 40px;
+  color: #673ab7;
+}
+
+.exercise-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.remove-exercise-button {
+  padding: 20px 50px;
+  font-size: 29px;
+  background-color: #f44336; /* Red button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.remove-exercise-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  background: white;
+  border-radius: 15px;
+  padding: 50px;
+  width: 90%; /* Increase from 80% to 90% */
+  max-width: 1400px; /* Wider box */
+  margin: 50px auto;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.charts-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 48%; /* Ensures two charts fit side by side */
+  text-align: center;
+}
+
+
+/* Title */
+.dashboard-title, 
+.charts-row h3, 
+.progress-cards p, 
+.progress-cards h3 {
+  font-size: 45px; /* Increased from 38px to 45px (+7) */
+}
+
+/* Progress Cards */
+.progress-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adds spacing between cards */
+  margin-top: 30px; /* Creates gap between buttons & progress cards */
+}
+
+
+.custom-btn {
+  padding: 20px 40px; /* Increased button size */
+  font-size: 31px; /* Increased from 24px to 31px (+7) */
+  background-color: #2196f3; /* Blue button */
+  color: white; /* White text */
+  border: none;
+  border-radius: 12px; /* Increased border-radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #673ab7;
+}
+
+.card h3 {
+  font-size: 32px;
+  color: #333;
+}
+
+/* Charts Section */
+.charts-section {
+  margin-top: 40px;
+}
+
+/* Reminders */
+.reminders {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.reminders h3 {
+  font-size: 36px;
+  color: #673ab7;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text horizontally */
+  font-size: 31px; /* Increased from 24px to 31px */
+  padding: 15px; /* Increased padding */
+  background: #f4f4f9;
+  margin: 10px auto;
+  width: 50%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center; /* Ensures text aligns centrally */
+}
+
+.task-icon {
+  margin-right: 10px; /* Adds spacing between icon and text */
+}
+
+.task-item:hover {
+  background: #e0e0e0;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Task Panel */
+.task-panel {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.task-panel h3 {
+  font-size: 36px;
+  color: #673ab7;
+}
+
+.action-button {
+  padding: 15px 30px;
+  font-size: 24px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-button:hover {
+  background: #388e3c;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+.dashboard-container.dark {
+  background-color: #1e1e1e; /* Darker container */
+  color: #e0e0e0;
+}
+
+.card.dark-mode {
+  background-color: #2a2a2a; /* Dark card background */
+  color: #fff;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #4caf50; /* Green for light mode */
+}
+
+.theme-btn:hover {
+  background-color: #45a049;
+}
+
+body.dark-mode .theme-btn {
+  background-color: #673ab7; /* Purple for dark mode */
+}
+
+body.dark-mode .theme-btn:hover {
+  background-color: #5a2da3;
+}
+
+.customization-panel {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adds space between buttons */
+  flex-wrap: wrap;
+}
+
+.reminder-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog-content h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.dialog-content label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.dialog-content input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.confirm-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45%;
+}
+
+.cancel-button {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45%;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+.time-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.time-selector input {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.time-period-selector {
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
